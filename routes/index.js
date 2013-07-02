@@ -8,12 +8,17 @@ exports.index = function(req, res){
     , access_token_secret:  'UAC3F9BsOpMrmNTsZDCwCf42YrWlXn6P5E3lhLFE'
   });
 
-  T.get('search/tweets', { q: 'camden since:2011-11-11 lang:en', count: 100 }, function(err, reply) {
-      var statuses = '';
+  var query = req.query.q;
+  var time24hoursAgo = new Date().getTime() - (24 * 60 * 60 * 1000);
+  
+  T.get('search/tweets', { q: query + ' lang:en', count: 100 }, function(err, reply) {
+      var count = 0;
       for (i in reply.statuses) {
-          statuses += reply.statuses[i].text + ' ';
+          var createdAt =  new Date(reply.statuses[i].created_at).getTime();
+          if (time24hoursAgo <= createdAt) {
+            count++;
+          }
       }
-      var content = JSON.stringify(statuses);
-      res.render('index', { title: 'Search', content: content });
+      res.render('index', { count: count });
   });
 };
