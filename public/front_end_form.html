@@ -70,6 +70,9 @@
                     searchTermsArray=getSearchTerms();
                     console.log(searchTermsArray);
                 });
+                $('#clear').click(function(event) {
+                    clearValues();
+                });
             });
         </script>
         
@@ -102,7 +105,7 @@
                     <h2>Query Ten</h2>
                     <input type="text" name="search_10" id="search_10"><div class="result" id="result_10"></div>
                     <br>
-                    <input type="submit" id="submit"><input type="button" id="clear" value="Clear" onClick="clearValues()">
+                    <input type="submit" id="submit"><input type="button" id="clear" value="Clear" >
                 </form>
             </div>
         </div>
