@@ -1,0 +1,31 @@
+ body{
+                font-family:arial;
+                background-color:#252525;
+                color:white;
+            }
+            .centerCol{
+                position:absolute;
+                left:20%;
+            }
+            .result, input{
+                float:left;
+                width:300px;
+            }
+            .form h2{
+                clear:left;
+                padding-top:20px;
+                margin-bottom:5px;
+                font-size:14px;
+            }
+            .result{
+                margin-left: 20px;
+                color:#80F47D;
+            }
+            #submit{
+                clear:left;
+                margin-top:20px;
+                color:white;
+                background-color:black;
+                border:1px solid #cccccc;
+                width:120px;
+            }
