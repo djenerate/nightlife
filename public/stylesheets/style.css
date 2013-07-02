@@ -47,13 +47,22 @@
                 margin-left: 20px;
                 color:#80F47D;
             }
-            #submit{
-                clear:left;
+            #submit, #clear{
+                
                 margin-top:30px;
                 color:white;
                 background-color:black;
                 border:1px solid #cccccc;
+                float:left;
+                margin-right:15px;
+            }
+            #submit{
+                clear:left;
                 width:120px;
+            }
+            #clear{
+                width:120px;
+                
             }
             .bottomCopy{
                 clear:left;

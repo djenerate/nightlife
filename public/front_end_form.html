@@ -38,13 +38,28 @@
                     true // this parameter required
                 );
             }
-            
+            function clearValues(){
+                var j=0;
+                $('input').each( function(index){
+                    if($(this).attr('id') != 'submit' && $(this).attr('id') != 'clear' ){
+                            $(this).val('');
+                         setResultsText(j,'');
+                    }
+                    j++;
+                });
+            }
+             function setResultsText(i,copy){
+                 $('#result_' + (i+1)).html(copy);
+             }
              function getSearchTerms(){
                 var searchTerms=new Array();
+                var i=0;
                 $('input').each( function(index){
-                    if($(this).val() != ''){
+                    if($(this).val() != '' && $(this).attr('id') != 'submit' && $(this).attr('id') != 'clear' ){
                         searchTerms.push( escape($(this).val()) );
+                        setResultsText(i,'Loading...');
                     }
+                    i++;
                 });
                 return searchTerms;
             } 
@@ -87,7 +102,7 @@
                     <h2>Query Ten</h2>
                     <input type="text" name="search_10" id="search_10"><div class="result" id="result_10"></div>
                     <br>
-                    <input type="submit" id="submit">
+                    <input type="submit" id="submit"><input type="button" id="clear" value="Clear" onClick="clearValues()">
                 </form>
             </div>
         </div>
