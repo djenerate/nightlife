@@ -7,7 +7,7 @@ html
     block content
     
     .centerCol
-        <img src="images/paige-santillo.jpg">
+        img(src="images/paige-santillo.jpg")
         h1 Paige&apos;s Night Life App
         h2 Proof of concept
         .form
@@ -25,16 +25,24 @@ html
                 input(type="text", name="search_4", id="search_4")
                 .result#result_4
                 h2 Query Five
+                input(type="text", name="search_5", id="search_5")
                 .result#result_5
                 h2 Query Six
+                input(type="text", name="search_6", id="search_6")
                 .result#result_6
                 h2 Query Seven
+                input(type="text", name="search_7", id="search_7")
                 .result#result_7
                 h2 Query Eight
+                input(type="text", name="search_8", id="search_8")
                 .result#result_8
                 h2 Query Nine
+                input(type="text", name="search_9", id="search_9")
                 .result#result_9
                 h2 Query Ten
+                input(type="text", name="search_10", id="search_10")
                 .result#result_10
                 <br>
-                <input type="submit" id="submit"><input type="button" id="clear" value="Clear" >
+                input(type="submit", id="submit")
+                input(type="button" id="clear" value="Clear")
+        .bottomCopy This page will search twitter for the specified terms in the input fields. This concept could also be extended to other social network platforms such as Facebook by adding a drop down selector or radio buttons to choose the required platform to query. 
