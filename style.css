@@ -25,11 +25,13 @@
             h1{
                 margin-bottom:10px;
                 font-size:27px;
+                font-weight: normal;
             }
             h2{
                 color:#cccccc;
                 margin-top:0;
                 font-size:23px;
+                font-weight: normal;
             }
             .result, input{
                 float:left;
@@ -48,7 +50,7 @@
             }
             #submit{
                 clear:left;
-                margin-top:20px;
+                margin-top:30px;
                 color:white;
                 background-color:black;
                 border:1px solid #cccccc;
